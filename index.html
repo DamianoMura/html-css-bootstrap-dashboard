@@ -48,6 +48,9 @@
             <h1>Catalogo Libri</h1>
           </div>
           <div>
+            <!--   on mobile and tablet versions shows the button with tag <a> to link you in a different page add-book.html
+            *                     while on desktop shows the tag <button> to open a modal #add-book   
+              -->
             <a href="./add-book.html" class="btn btn-primary d-lg-none">Aggiungi Libro</a>
             <button type="button" class="btn btn-primary d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#add-book">Aggiungi Libro</button>
           </div>
@@ -313,13 +316,12 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Aggiungi Libro</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="row mt-3 gy-3">
+        <div class="row gy-1">
       
           <div class="col-6"> 
-              <label for="author-name" class="form-label">Nome Autore</label>
+              <label for="author-name" class="form-label fw-bold">Nome Autore</label>
               <input type="email" class="form-control" id="author-name" placeholder="Inserisci il nome dell'Autore" required>
           </div>
           
@@ -329,11 +331,9 @@
           </div>
           
           <div class="col-12">
-            <div class="mb-3">
               <label for="book-title" class="form-label fw-bold">Titolo</label>
               <input type="email" class="form-control" id="book-title" placeholder="Inserisci il titolo del libro" required>
               <div class="form-text">Titolo versione italiana</div>
-            </div>
           </div>
     
           <div class="col-12">
