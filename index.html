@@ -1,301 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" >
-  <link rel="stylesheet" href="assets/css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <img src="assets/img/duck.png" alt="Bootstrap" width="70" class="m-2">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Anagrafica Utenti</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Storico Prestiti</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Help</a>
-        </li>
-     </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" data-bs-theme="light">
-        <button class="btn btn-outline-light" type="submit">Cerca</button>
-      </form>
-    </div>
-  </div>
-</nav>
-  </header>
-  <main>
-    <div class="container my-4">
-      <div class="row">
-        <div class="col-12 col-lg-8">
-        <div class="d-flex justify-content-between">
-          <div>
-            <h1>Catalogo Libri</h1>
-          </div>
-          <div>
-            <a href="./add-book.html" class="btn btn-primary">Aggiungi Libro</a>
-            <!-- checkout branch modal-add-book for extra functionality -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <img
+            src="assets/img/duck.png"
+            alt="Bootstrap"
+            width="70"
+            class="m-2"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Catalogo Libri</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Anagrafica Utenti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Storico Prestiti</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Help</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Cerca"
+                aria-label="Search"
+                data-bs-theme="light"
+              />
+              <button class="btn btn-outline-light" type="submit">Cerca</button>
+            </form>
           </div>
         </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h1>Catalogo Libri</h1>
+              </div>
+              <div>
+                <a href="./add-book.html" class="btn btn-primary"
+                  >Aggiungi Libro</a
+                >
+                <!-- checkout branch modal-add-book for extra functionality -->
+              </div>
+            </div>
 
-        <table class="table table-striped my-4">
-          <thead>
-            <tr>
-              <th class="w-50">Titolo</th>
-              <th class="d-none d-md-table-cell">Data prestito</th>
-              <th>Stato</th>
-              <th>Azioni</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>I pilastri della terra</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>I promessi sposi</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Il signore degli anelli</td>
-              <td class="d-none d-md-table-cell">18/10/2023</td>
-              <td><span class="badge bg-warning">In prestito</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Harry Potter e la Pietra Filosofale</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Il codice Da Vinci</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-danger">Non disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Shining</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>La Divina Commedia</td>
-              <td class="d-none d-md-table-cell">21/09/2023</td>
-              <td><span class="badge bg-warning">In prestito</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Il Trono di Spade</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Il Mondo di Sofia</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-danger">Non disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Le cronache di Narnia: il leone, la strega e l'armadio</td>
-              <td class="d-none d-md-table-cell">25/07/2023</td>
-              <td><span class="badge bg-warning">In prestito</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>Il piccolo principe</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>La storia infinita</td>
-              <td class="d-none d-md-table-cell">-</td>
-              <td><span class="badge bg-success">Disponibile</span></td>
-              <td>
-                <a href="#" class="btn btn-outline-secondary border-2 me-1">
-                <i class="fa-solid fa-pen"></i>
-                </a>
-                <button class="btn btn-outline-secondary border-2">
-                <i class="fa-solid fa-trash"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        
-        </div>
-        <div class="col-12 col-lg-4">
-          <!--card 1-->
-          <div class="card mb-2">
-            <div class="card-header"><h3>Todo</h3></div>
-            <div class="card-body">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="0">
-                    <label class="form-check-label">
-                      Chiamare segreteria
-                    </label>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1">
-                    <label class="form-check-label">
-                      Mandare avvisi prestiti scaduti
-                    </label>
-                  </div>
-                </li>
-                <li class="list-group-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="2">
-                    <label class="form-check-label">
-                      Ordinare nuovi libri
-                    </label>
-                  </div>
-                </li>
-              </ul>
-            </div>
+            <table class="table table-striped my-4">
+              <thead>
+                <tr>
+                  <th class="w-50">Titolo</th>
+                  <th class="d-none d-md-table-cell">Data prestito</th>
+                  <th>Stato</th>
+                  <th>Azioni</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I pilastri della terra</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>I promessi sposi</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il signore degli anelli</td>
+                  <td class="d-none d-md-table-cell">18/10/2023</td>
+                  <td><span class="badge bg-warning">In prestito</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Harry Potter e la Pietra Filosofale</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il codice Da Vinci</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-danger">Non disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Shining</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>La Divina Commedia</td>
+                  <td class="d-none d-md-table-cell">21/09/2023</td>
+                  <td><span class="badge bg-warning">In prestito</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il Trono di Spade</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il Mondo di Sofia</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-danger">Non disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Le cronache di Narnia: il leone, la strega e l'armadio
+                  </td>
+                  <td class="d-none d-md-table-cell">25/07/2023</td>
+                  <td><span class="badge bg-warning">In prestito</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Il piccolo principe</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>La storia infinita</td>
+                  <td class="d-none d-md-table-cell">-</td>
+                  <td><span class="badge bg-success">Disponibile</span></td>
+                  <td>
+                    <a href="#" class="btn btn-outline-secondary border-2 me-1">
+                      <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <button class="btn btn-outline-secondary border-2">
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <!--card 2-->
-          <div class="card">
-            <div class="card-header">
-              <h3>F.A.Q.</h3>
+          <div class="col-12 col-lg-4">
+            <!--card 1-->
+            <div class="card mb-2">
+              <div class="card-header"><h3>Todo</h3></div>
+              <div class="card-body">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="0"
+                      />
+                      <label class="form-check-label">
+                        Chiamare segreteria
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="1"
+                      />
+                      <label class="form-check-label">
+                        Mandare avvisi prestiti scaduti
+                      </label>
+                    </div>
+                  </li>
+                  <li class="list-group-item">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="2"
+                      />
+                      <label class="form-check-label">
+                        Ordinare nuovi libri
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="card-body">
-              <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Come aggiungere un nuovo libro?
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, nobis nisi. Assumenda velit dicta deserunt eveniet blanditiis animi aliquam officiis quae est, delectus at. Facere possimus eos quia porro modi.
+            <!--card 2-->
+            <div class="card">
+              <div class="card-header">
+                <h3>F.A.Q.</h3>
+              </div>
+              <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Come aggiungere un nuovo libro?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Error, nobis nisi. Assumenda velit dicta deserunt
+                        eveniet blanditiis animi aliquam officiis quae est,
+                        delectus at. Facere possimus eos quia porro modi.
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Come posso accedere all'anagrafica utenti?
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias vero ut numquam vel asperiores unde dolores sed perspiciatis incidunt recusandae commodi expedita iure aspernatur delectus nisi, quae minus! Id, voluptatum.
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Come posso accedere all'anagrafica utenti?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Alias vero ut numquam vel asperiores unde dolores
+                        sed perspiciatis incidunt recusandae commodi expedita
+                        iure aspernatur delectus nisi, quae minus! Id,
+                        voluptatum.
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Posso usare questa dashboard da mobile?
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eum natus exercitationem enim ea nisi mollitia, blanditiis, quam neque modi, deserunt cum optio veniam laudantium excepturi deleniti a accusantium officia?
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Posso usare questa dashboard da mobile?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reiciendis eum natus exercitationem enim ea nisi
+                        mollitia, blanditiis, quam neque modi, deserunt cum
+                        optio veniam laudantium excepturi deleniti a accusantium
+                        officia?
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -304,9 +396,12 @@
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer></footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-</body>
+    </main>
+    <footer></footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
